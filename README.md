@@ -1,5 +1,5 @@
 # Bank System Simulation  
-**Programming 3: Java Programming – Structured Programming**  
+**Programming 3: Structured Programming**  
 
 ---
 
