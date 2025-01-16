@@ -49,7 +49,7 @@ public class Main {
                         System.out.println("\nDeposit Amount must be greater than 0");
                     } else if (depo <= 500000) {
                         bal += depo;
-                        System.out.println("\nDeposit Amount is successfully completed.");
+                        System.out.println("\nDeposit Transaction is successfully completed.");
                     } else {
                         System.out.println("\nDeposit Amount must not be greater than 500,000");
                     }
