@@ -43,15 +43,21 @@ public class Main {
 
                 case 'D':
                     System.out.print("\nEnter amount to Deposit: ");
-                    depo = Integer.valueOf(scanner.nextLine());
+                    String initDepo = scanner.nextLine();
 
-                    if (depo <= 0) {
-                        System.out.println("\nDeposit Amount must be greater than 0");
-                    } else if (depo <= 500000) {
-                        bal += depo;
-                        System.out.println("\nDeposit Transaction is successfully completed.");
-                    } else {
-                        System.out.println("\nDeposit Amount must not be greater than 500,000");
+                    try {
+                        depo = Integer.parseInt(initDepo);
+
+                        if (depo <= 0) {
+                            System.out.println("\nDeposit Amount must be greater than 0\n");
+                        } else if (depo <= 500000) {
+                            bal += depo;
+                            System.out.println("\nDeposit Transaction is successfully completed.\n");
+                        } else {
+                            System.out.println("\nDeposit Amount must not be greater than 500,000\n");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("\nInvalid entry. Please enter a valid number.\n");
                     }
 
                     System.out.print("Want to Transact Another (Y/N)? ");
@@ -76,17 +82,23 @@ public class Main {
 
                 case 'W':
                     System.out.print("\nEnter amount to Withdraw: ");
-                    withdraw = Integer.valueOf(scanner.nextLine());
+                    String initWithdraw = scanner.nextLine();
 
-                    if (withdraw <= 0) {
-                        System.out.println("\nWithdrawal Amount must be greater than zero");
-                    } else if (withdraw > bal) {
-                        System.out.println("\nWithdrawal Amount must not be greater than " + bal);
-                    } else if (!(withdraw%100==0)) {
-                        System.out.println("\nWithdrawal Amount must be exactly divisible by 100");
-                    } else {
-                        bal -= withdraw;
-                        System.out.println("\nWithdrawal Transaction is successfully completed.");
+                    try {
+                        withdraw = Integer.parseInt(initWithdraw);
+
+                        if (withdraw <= 0) {
+                            System.out.println("\nWithdrawal Amount must be greater than zero\n");
+                        } else if (withdraw > bal) {
+                            System.out.println("\nWithdrawal Amount must not be greater than " + bal + "\n");
+                        } else if (!(withdraw % 100 == 0)) {
+                            System.out.println("\nWithdrawal Amount must be exactly divisible by 100\n");
+                        } else {
+                            bal -= withdraw;
+                            System.out.println("\nWithdrawal Transaction is successfully completed.\n");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("\nInvalid entry. Please enter a valid number.\n");
                     }
 
                     System.out.print("Want to Transact Another (Y/N)? ");
