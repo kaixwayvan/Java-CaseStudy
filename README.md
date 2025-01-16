@@ -1,6 +1,5 @@
 # Bank System Simulation  
-**Diploma in Information & Information Technology (DIT 2-X)**  
-**Programming 3: Java Programming – Structured Programming**  
+**Programming 3: Structured Programming**  
 
 ---
 
