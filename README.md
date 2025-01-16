@@ -15,3 +15,10 @@ The goal of this case study is to:
 - Implement a simulation of a **Bank System** using structured programming techniques.  
 - Reinforce Java programming concepts, such as loops, conditionals, functions, and basic input/output.  
 - Provide a real-world application of modular programming principles.  
+
+---
+
+### Note
+**Programming Limitations:**
+
+The program uses a non-modular style - all logic is contained and redundantly repeated within a single block.
