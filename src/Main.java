@@ -32,7 +32,7 @@ public class Main {
                         if (depo <= 0) {
                             System.out.println("\nDeposit Amount must be greater than 0\n");
                         } else if (depo <= 500000) {
-                            bal += depo;
+                            bal += depo; // bal = bal + depo
                             System.out.println("\nDeposit Transaction is successfully completed.\n");
                         } else {
                             System.out.println("\nDeposit Amount must not be greater than 500,000\n");
@@ -57,7 +57,7 @@ public class Main {
                         } else if (!(withdraw % 100 == 0)) {
                             System.out.println("\nWithdrawal Amount must be exactly divisible by 100\n");
                         } else {
-                            bal -= withdraw;
+                            bal -= withdraw; // bal = bal - withdraw
                             System.out.println("\nWithdrawal Transaction is successfully completed.\n");
                         }
                     } catch (NumberFormatException e) {
