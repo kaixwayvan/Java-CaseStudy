@@ -20,25 +20,6 @@ public class Main {
             switch (option) {
                 case 'B':
                     System.out.println("\nYour current balance is " + bal + "\n");
-
-                    System.out.print("Want to Transact Another (Y/N)? ");
-                    char transactOptB;
-                    while (true) {
-                        transactOptB = Character.toUpperCase(scanner.nextLine().charAt(0));
-
-                        if (!(transactOptB == 'Y' || transactOptB == 'N')) {
-                            System.out.print("\nInvalid entry, enter Y/N only: ");
-                            continue;
-                        } else {
-                            break;
-                        }
-                    }
-
-                    if (transactOptB == 'Y') {
-                        System.out.println();
-                        continue;
-                    }
-
                     break;
 
                 case 'D':
@@ -58,24 +39,6 @@ public class Main {
                         }
                     } catch (NumberFormatException e) {
                         System.out.println("\nInvalid entry. Please enter a valid number.\n");
-                    }
-
-                    System.out.print("Want to Transact Another (Y/N)? ");
-                    char transactOptD;
-                    while (true) {
-                        transactOptD = Character.toUpperCase(scanner.nextLine().charAt(0));
-
-                        if (!(transactOptD == 'Y' || transactOptD == 'N')) {
-                            System.out.print("\nInvalid entry, enter Y/N only: ");
-                            continue;
-                        } else {
-                            break;
-                        }
-                    }
-
-                    if (transactOptD == 'Y') {
-                        System.out.println();
-                        continue;
                     }
 
                     break;
@@ -99,24 +62,6 @@ public class Main {
                         }
                     } catch (NumberFormatException e) {
                         System.out.println("\nInvalid entry. Please enter a valid number.\n");
-                    }
-
-                    System.out.print("Want to Transact Another (Y/N)? ");
-                    char transactOptW;
-                    while (true) {
-                        transactOptW = Character.toUpperCase(scanner.nextLine().charAt(0));
-
-                        if (!(transactOptW == 'Y' || transactOptW == 'N')) {
-                            System.out.print("\nInvalid entry, enter Y/N only: ");
-                            continue;
-                        } else {
-                            break;
-                        }
-                    }
-
-                    if (transactOptW == 'Y') {
-                        System.out.println();
-                        continue;
                     }
 
                     break;
@@ -145,6 +90,30 @@ public class Main {
                 default:
                     System.out.println("\nInvalid entry, enter any valid option: B/D/W/Q\n");
                     continue;
+            }
+
+            if (option == 'Q') {
+                System.out.println("\nThank you for using the program!");
+                scanner.close();
+                return;
+            }
+
+            System.out.print("Want to Transact Another (Y/N)? ");
+            char transactOpt;
+            while (true) {
+                transactOpt = Character.toUpperCase(scanner.nextLine().charAt(0));
+
+                if (!(transactOpt == 'Y' || transactOpt == 'N')) {
+                    System.out.print("\nInvalid entry, enter Y/N only: ");
+                    continue;
+                } else {
+                    break;
+                }
+            }
+
+            if (transactOpt == 'Y') {
+                System.out.println();
+                continue;
             }
 
             System.out.println("\nThank you for using the program!");
